@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 5</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        .container{
+            display: flex;
+            border: 2px solid violet;
+            margin: 20px auto;
+            width: 400px;
+            height: 300px; 
+            flex-direction: column;
+            align-items: center;  
+            border-radius: 20px;     
+        }
+        .h1color{
+            margin: 20px;
+            color: violet;
+        }
+        input{
+            size: 50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="h1color">Celius</h1>
+        <input type="number" id="celius" size="40">
+        <h1 class="h1color">Fareheit</h1>
+        <input type="number" id="fareheit" size="40">
+    </div>
+    <script>
+        const C=document.getElementById("celius")
+        const F=document.getElementById("fareheit")
+
+        C.addEventListener("input",()=>{
+            const result= (parseFloat(C.value) * 9/5) + 32;
+            F.value=result.toFixed(2);
+        });
+        F.addEventListener("input",()=>{
+            const result= (parseFloat(F.value) - 32) * 9/5;
+            C.value=result.toFixed(2);
+        })
+    </script>
+</body>
+</html>

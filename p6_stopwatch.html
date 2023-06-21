@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project  6</title>
+    <style>
+         *{
+            margin: 0;padding: 0;
+        }
+        .container{
+            display: flex;
+            border: 2px solid black;
+            margin: 20px auto;
+            width: 400px;
+            height: 200px; 
+            flex-direction: column;
+            align-items: center;  
+            border-radius: 20px;     
+        }
+        .timer{
+            margin-top: 30px;
+        }
+        .time{
+            font-size:60px;
+        }
+        .btns{
+            margin-top: 20px;
+        }
+        .btns button,button{
+            padding: 5px 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="timer">
+            <span class="time" id="hours"> 00 </span>
+            <span class="time">:</span>
+            <span class="time" id="minutes"> 00 </span>
+            <span class="time">:</span>
+            <span class="time" id="seconds"> 00 </span>
+        </div>
+        <div class="btns">
+            <button type="button">Start</button>
+            <button type="button">Stop</button>
+        </div>
+        <button type="button">Reset</button>
+    </div>
+    <script>
+        let start=document.body.getElementsByTagName("button")[0]
+        let stoper=document.body.getElementsByTagName("button")[1]
+        let reset=document.body.getElementsByTagName("button")[2]
+        console.log(start)
+        let [h,m,s]=[0,0,0]
+        let H1=document.getElementById("hours")
+        let M1=document.getElementById("minutes")
+        let S1=document.getElementById("seconds")
+        
+        start.addEventListener('click',intervalCaller())
+        function intervalCaller(){
+            let t=setInterval(()=>{
+                    if(s==59){
+                        s=0
+                        if(m==59){
+                            m=0
+                            if(h==12){
+                                h=1
+                            }
+                            else{
+                                h++;
+                            }
+                        }
+                        else{
+                            m++;
+                        }
+                    }
+                    else{
+                        s++;
+                    }
+            update(h.toString(),m.toString(),s.toString())
+            },1000)
+        }
+
+        function update(h,m,s){
+            if (h.length==1){
+                h='0'+h
+            }
+            if (m.length==1){
+                m='0'+m
+            }
+            if (s.length==1){
+                s='0'+s
+            }
+            H1.innerHTML=`${h}`
+            M1.innerHTML=`${m}`
+            S1.innerHTML=`${s}`
+        }
+
+        stoper.addEventListener('click',()=>{
+            clearInterval(t)
+        })
+        
+    </script>
+</body>
+</html>

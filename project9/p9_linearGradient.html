@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Gradient | Project 9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Linear Gradient</h2>
+    <div class="main">
+        <div class="changeArea" id="box-color"></div>
+        <div class="directionDiv" id="directionDiv">
+            Direction <br>
+            <select name="direction" id="direction">
+                <option value="to bottom">to bottom</option>
+                <option value="to top">to top</option>
+                <option value="to left">to left</option>
+                <option value="to right" selected>to right</option>
+                <option value="to bottom right">to bottom right</option>
+                <option value="to bottom left">to bottom left</option>
+                <option value="to top right">to top right</option>
+                <option value="to top left">to top left</option>
+            </select>
+        </div>
+        <div class="gradient">
+            Colors
+            <div class="innerSelector">
+                <div>
+                    <input type="color" name="color" id="color1" value="#3009f6">
+                </div>
+                <div>
+                    <input type="color" name="color" id="color2" value="#00e9fa">
+                </div>
+            </div>
+        </div>
+        <div class="code" id="code">
+            background : linear-gradient(to right, #3009f6 , #00e9fa);     
+        </div>
+        <button type="button" onclick="save()" >Copy Code</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            margin: 30px auto;
+            width: 500px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+            border-radius: 10px;
+            flex-direction: column;
+        }
+        button{
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2 id="write"></h2>
+        <button type="button" id="btnColor">Click</button>
+    </div>
+    <script>
+        const colors=['red','green','blue','white','wheat','violet','blueviolet','lavender']
+        button=document.body.querySelector('#btnColor');
+        button.addEventListener('click',()=>{
+            const color=colors[Math.floor(Math.random()*colors.length)];
+            document.getElementById("container").style.backgroundColor=color;
+            document.getElementById("write").innerHTML=color+"<br>";
+        })
+    </script>
+</body>
+</html>

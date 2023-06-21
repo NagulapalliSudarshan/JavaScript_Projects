@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <div class="c1">
+            <ion-icon name="location-outline"></ion-icon>
+            <input type="text" id="place" placeholder="place" size="30">
+            <a type="button"  id="icon" onclick="StartProcedure()"><ion-icon name="search-outline"></ion-icon></a>
+        </div>
+        <div class="c2 hidden" id="changer">
+            <div class="template" id="c"></div>
+            <div class="template" id="w"></div>
+            <div class="template" id="d"></div>
+            
+        </div>
+    </div>
+    
+
+    <!-- script tags   -->
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

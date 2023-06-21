@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 400px;
+    border: 2px solid black;
+    margin: 20px auto;
+    align-items: center;
+    padding: 50px;
+    background-color: rgb(127, 242, 255);
+    background-image: url(https://images.theconversation.com/files/232705/original/file-20180820-30593-1nxanpj.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop);
+}
+
+.c1{
+    /* margin-top: 30px; */
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+}
+
+ion-icon:hover{
+    cursor: pointer;
+}
+
+input{
+    padding-left: 5px;
+    padding-right: 10px;
+    border-bottom: 2px solid black; 
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+}
+input:focus{
+    outline: none;
+}
+
+.hidden{
+    visibility: hidden;
+}
+.expand{
+    height: auto;
+}
+
+.c2{
+    padding: 20px;
+}
+.template{
+    display: flex;
+    margin: 20px;
+    /* border: 2px solid rgb(0, 229, 255); */
+    padding: 10px;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.template img{
+    height: 85px;
+}
+
+.template p{
+    font-size: x-large;
+}
+
+.template div{
+    margin-left: 10px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#c,#w,#d{
+    border: 2px solid black;
+}
+
+h1{
+    margin-bottom: 20px;
+}

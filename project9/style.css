@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Saira Semi Condensed', sans-serif;
+}
+ :root{
+    --defWidth:300px;
+ }
+ h2{
+    margin: auto;
+ }
+ .main{
+    margin: 40px auto;
+    width: 350px;
+    height: autos;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+ }
+
+ .changeArea{
+    border-radius: 10px;
+    margin-top: 20px;
+    width: var(--defWidth);
+    height: 180px;
+    border: 1px solid transparent;
+    background : linear-gradient(to right, #3009f6 , #00e9fa);
+ }
+.directionDiv{
+    width: var(--defWidth);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.directionDiv select{
+    cursor: pointer;
+    margin-top: 6px;
+    padding:5px;
+}
+.gradient{
+    margin-top: 10px ;
+    margin-bottom: 10px ;
+    width: var(--defWidth);
+}
+.innerSelector{
+    display:flex;
+    width: var(--defWidth);
+}
+
+.innerSelector input{
+    cursor: pointer;
+    width: 145px;
+}
+.innerSelector div:first-child{
+    margin-right: 5px;
+}
+
+.code{
+    width: var(--defWidth);
+    border: 1px solid black;
+    margin: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+button{
+    width: var(--defWidth);
+    padding: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: blueviolet;
+        }
+        .container{
+            margin: 45px auto;
+            width: 220rem;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 5px;
+            width: 30rem;
+            box-shadow: 5px 5px 5px black;
+        }
+
+        .m10{
+            margin: 5px;
+        }
+        #error{
+
+            margin: auto;
+            color: red;
+            background-color: rgb(209, 128, 128);
+            width: 300px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <center>
+
+            <h2 class="m10">A Message You Would Like To Pass</h2>
+            <input type="text" id="message" size="40" value="" class="m10">
+            <p id="error"></p>
+            <button type="button" value="Submit" onclick="display()" class="m10">Submit</button>
+            <p class="m10"><strong>Message Delivered...!</strong></p>
+            <p id="pass"></p>
+            </center>
+            <script>
+                function display() {
+                    var message = document.getElementById('message').value;
+                if (message.length != 0) {
+                    document.getElementById('error').innerHTML = "";
+                    document.getElementById('pass').innerHTML = message;
+                    document.getElementById('pass').style.margin="8px"
+                }
+                else{
+                    document.getElementById('error').innerHTML = "Please enter a message.";
+                    document.getElementById('error').style.margin="8px"
+                    document.getElementById('pass').innerHTML = "";
+                }
+            }
+            </script>
+    </div>
+</body>
+</html>

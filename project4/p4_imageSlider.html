@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 4</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        #container{
+            width: auto;
+            height: 500px;
+            border: 1px solid black;
+            margin: 30px;
+            background-image: url(image1.jpg);
+        }
+        #left{
+            position: absolute;
+            top: 260px;
+            left: 15px;
+            font-size: xx-large;
+            cursor: pointer;
+        }
+        #right{
+            position: absolute;
+            top: 260px;
+            right: 15px;
+            font-size: xx-large;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    </div>
+    <button type="button" class="btn" id="left">&#60;</button>
+    <button type="button" class="btn" id="right">&#62;</button>
+    <script>
+        const container = document.body.querySelector('#container');
+        const left = document.querySelector('#left');
+        const right = document.querySelector('#right');
+        const nums=["1","2","3","4","5"]
+        let count=0;
+        
+        left.addEventListener('click',leftMove)
+        right.addEventListener('click',rightMove)
+
+        function leftMove(){
+            if (count==0){
+                count=4;
+           }
+           else{
+            count--;
+           }
+           console.log("left - ",count)
+           let i= "image"+`${nums[count]}`+".jpg"
+           container.style.background=`url(${i})`;
+        }
+        function rightMove(){
+            if (count==4){
+                count=0;
+            }
+            else{
+                count++;
+            }
+           console.log("right - ",count)
+           let i= "image"+`${nums[count]}`+".jpg"
+           container.style.background=`url(${i})`;
+        }
+    </script>
+</body>
+</html>
